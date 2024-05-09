@@ -1,5 +1,5 @@
 export default function Home() {
   return (
-    <div>Hello Airbnb!</div>
+    <div className="text-gold text-2xl">Hello Airbnb!</div>
   );
 }
