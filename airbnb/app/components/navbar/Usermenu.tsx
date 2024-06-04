@@ -4,8 +4,10 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import Avatar from '../Avatar';
 import { useCallback, useState } from 'react';
 import MenuItem from './MenuItem';
+import useRegisterController from '@/app/hooks/useRegisterController';
 
 const UserMenu = () => {
+    const registerController = useRegisterController();
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleOpen = useCallback(() => {
@@ -89,7 +91,7 @@ const UserMenu = () => {
                         "
                     >
                         <MenuItem onClick={() => {}} label="Login" />
-                        <MenuItem onClick={() => {}} label="Register" />
+                        <MenuItem onClick={registerController.onOpen} label="Register" />
                     </div>
                 </div>
             )}

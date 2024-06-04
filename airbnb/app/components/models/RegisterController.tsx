@@ -6,6 +6,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { useCallback, useState } from 'react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 import useRegisterController from '@/app/hooks/useRegisterController';
+import Controller from './Controller';
 
 const RegisterController = () => {
 const registerController = useRegisterController();
@@ -18,13 +19,28 @@ const {
 } = useForm<FieldValues>({
     defaultValues: {
         name: '',
-    email: '',
-    password: ''
+        email: '',
+        password: ''
     }
 });
 
+    const onSubmit: SubmitHandler<FieldValues> = (data) => {
+        setIsLoading(true);
+        axios.post('/api/register', data)
+            .then(() => {
+                registerController.onClose();
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+            .finally(() => {
+                setIsLoading(false);
+            })
+    }
+
     return (
-        <div></div>
+        <Controller disabled={isLoading} isOpen={registerController.isOpen} title="Sign Up" actionLabel="Confirm" 
+        onClose={registerController.onClose} onSubmit={handleSubmit(onSubmit)}  />
     );
 };
 
