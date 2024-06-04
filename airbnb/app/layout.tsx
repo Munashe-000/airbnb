@@ -2,7 +2,7 @@ import { Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import ClientOnly from "./components/ClientOnly";
-import Controller from "./components/models/Controller";
+import RegisterController from "./components/models/RegisterController";
 
 
 export const metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ClientOnly>
-          <Controller actionLabel="Submit" title="Hello" isOpen/>
+          <RegisterController/>  
           <Navbar />
         </ClientOnly>       
         {children}
