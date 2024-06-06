@@ -8,6 +8,7 @@ import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 import useRegisterController from '@/app/hooks/useRegisterController';
 import Controller from './Controller';
 import Heading from '../Heading';
+import Input from '../inputs/Input';
 
 const RegisterController = () => {
 const registerController = useRegisterController();
@@ -43,7 +44,15 @@ const {
         <div className='flex flex-col gap-4'>
             <Heading 
             title='Welcome to GlobeStay'
-            subtitle='Please create an account'
+            subtitle='Create an account'
+            />
+            <Input 
+                id='email'
+                label='Email'
+                disabled={isLoading}
+                register={register}
+                errors={errors}
+                required
             />
         </div>
     )
