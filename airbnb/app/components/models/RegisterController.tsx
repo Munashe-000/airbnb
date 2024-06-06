@@ -47,8 +47,25 @@ const {
             subtitle='Create an account'
             />
             <Input 
+                id='name'
+                label='Name'
+                disabled={isLoading}
+                register={register}
+                errors={errors}
+                required
+            />
+            <Input 
                 id='email'
                 label='Email'
+                disabled={isLoading}
+                register={register}
+                errors={errors}
+                required
+            />
+            <Input 
+                id='password'
+                label='Password'
+                type='password'
                 disabled={isLoading}
                 register={register}
                 errors={errors}
