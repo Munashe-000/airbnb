@@ -33,7 +33,7 @@ const CloseButton: React.FC<CloseButtonProps> = ({
                 w-full
                 ${outline ? 'bg-white' : 'bg-dark-blue'}
                 ${outline ? 'border-black' : 'bg-dark-blue'}
-                ${outline ? 'text-black' : 'text-black'}
+                ${outline ? 'text-black' : 'text-white'}
                 ${small ? 'py-1' : 'py-3'}
                 ${small ? 'text-sm' : 'text-md'}
                 ${small ? 'font-light' : 'font-semibold'}
