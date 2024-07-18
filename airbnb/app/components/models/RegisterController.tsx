@@ -9,6 +9,8 @@ import useRegisterController from '@/app/hooks/useRegisterController';
 import Controller from './Controller';
 import Heading from '../Heading';
 import Input from '../inputs/Input';
+import toast from 'react-hot-toast';
+import CloseButton from '../CloseButton';
 
 const RegisterController = () => {
 const registerController = useRegisterController();
@@ -33,7 +35,7 @@ const {
                 registerController.onClose();
             })
             .catch((error) => {
-                console.log(error);
+                toast.error('Something went wrong');
             })
             .finally(() => {
                 setIsLoading(false);
@@ -74,9 +76,26 @@ const {
         </div>
     )
 
+    const footerContent = (
+        <div className="
+            flex
+            flex-col
+            gap-4
+            mt-3
+        ">
+            <hr />
+            <CloseButton 
+                outline
+                label="Continue with Google"
+                icon={FcGoogle}
+                onClick={() => {}}
+            />
+        </div>
+    )
+
     return (
         <Controller disabled={isLoading} isOpen={registerController.isOpen} title="Sign Up" actionLabel="Confirm" 
-        onClose={registerController.onClose} onSubmit={handleSubmit(onSubmit)} body={bodyContent} />
+        onClose={registerController.onClose} onSubmit={handleSubmit(onSubmit)} body={bodyContent} footer={footerContent} />
     );
 };
 

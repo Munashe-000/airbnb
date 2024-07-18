@@ -199,6 +199,7 @@ const Controller: React.FC<ControllerProps> = ({
                                             onClick={handleSubmit}
                                         />
                                     </div>
+                                    {footer}
                                 </div>
                         </div>
 
