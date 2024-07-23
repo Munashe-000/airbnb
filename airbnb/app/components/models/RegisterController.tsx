@@ -116,7 +116,7 @@ const {
                         Already have an account?
                     </div>     
                     <div 
-                    onClick={registerController.onClose}
+                    onClick={registerController.onClose}        /*Perform action for login*/ 
                     className="
                         text-neutral-800
                         cursor-pointer
