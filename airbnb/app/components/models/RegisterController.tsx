@@ -132,7 +132,7 @@ const {
 
     return (
         <Controller disabled={isLoading} isOpen={registerController.isOpen} title="Sign Up" actionLabel="Confirm" 
-        onClose={registerController.onClose} onSubmit={handleSubmit(onSubmit)} body={bodyContent} footer={footerContent} />
+        onClose={registerController.onClose} onSubmit={handleSubmit(onSubmit)} body={bodyContent} footer={footerContent} /> /*html and css for form*/
     );
 };
 
