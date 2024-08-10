@@ -55,4 +55,4 @@ const CloseButton: React.FC<CloseButtonProps> = ({
     );
 };
 
-export default CloseButton; /*Model for all buttons basically, not just close buttons*/
+export default CloseButton;
