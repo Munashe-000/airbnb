@@ -136,4 +136,4 @@ const {
     );
 };
 
-export default RegisterController;
+export default RegisterController; /* Model for register action */
