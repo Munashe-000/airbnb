@@ -12,7 +12,7 @@ export const metadata = {
 };
 
 const font = Nunito({
-  subsets: ["latin"],       /*Latin Nunito font */
+  subsets: ["latin"],       
 })
 
 export default function RootLayout({
