@@ -24,4 +24,4 @@ export async function POST(
     });
 
     return NextResponse.json(user);
-}
+} /* carries json request info for user */
