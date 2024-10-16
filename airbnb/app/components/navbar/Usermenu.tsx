@@ -92,7 +92,7 @@ const UserMenu = () => {
                         cursor-pointer
                         "
                     >
-                        <MenuItem onClick={() => {}} label="Login" />
+                        <MenuItem onClick={loginController.onOpen} label="Login" />
                         <MenuItem onClick={registerController.onOpen} label="Register" />
                     </div>
                 </div>
