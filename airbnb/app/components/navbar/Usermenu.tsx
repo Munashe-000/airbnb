@@ -5,9 +5,11 @@ import Avatar from '../Avatar';
 import { useCallback, useState } from 'react';
 import MenuItem from './MenuItem';
 import useRegisterController from '@/app/hooks/useRegisterController';
+import useLoginController from '@/app/hooks/useLoginController copy';
 
 const UserMenu = () => {
     const registerController = useRegisterController();
+    const loginController = useLoginController();
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleOpen = useCallback(() => {
