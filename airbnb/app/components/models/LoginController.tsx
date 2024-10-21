@@ -12,7 +12,7 @@ import Input from '../inputs/Input';
 import toast from 'react-hot-toast';
 import CloseButton from '../CloseButton';
 import { FaFacebook } from 'react-icons/fa';
-import useLoginController from '@/app/hooks/useLoginController copy';
+import useLoginController from '@/app/hooks/useLoginController';
 
 const LoginController = () => {
 const registerController = useRegisterController();

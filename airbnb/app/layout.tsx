@@ -4,7 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import ClientOnly from "./components/ClientOnly";
 import RegisterController from "./components/models/RegisterController";
 import ToastProvider from "./providers/ToastProvider"; 
-import LoginController from "./components/models/LoginController copy";
+import LoginController from "./components/models/LoginController";
 
 
 export const metadata = {

@@ -4,8 +4,8 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import Avatar from '../Avatar';
 import { useCallback, useState } from 'react';
 import MenuItem from './MenuItem';
-import useRegisterController from '@/app/hooks/useRegisterController';
-import useLoginController from '@/app/hooks/useLoginController copy';
+import useRegisterController from '@/app/hooks/useRegisterController'; 
+import useLoginController from '@/app/hooks/useLoginController';
 
 const UserMenu = () => {
     const registerController = useRegisterController();
